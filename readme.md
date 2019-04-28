@@ -39,3 +39,6 @@ Implement the following functionality by using the official Spotify Developer's 
 1. When a user searches for any term in the search box (see `index.blade.php`), the result should be three separate lists: one list with matching artists, one with matching albums and one with tracks.
 
 1. Each result in the lists should consist of an image and a title (name of artist, album or track respectively). Each result should be clickable and lead to another page which contains some more detailed information about the clicked item.
+
+### Addendum
+In your solution you should focus on code quality and structure. If possible and timely reasonable, you should also add tests. In your Views, however, you do not need to care for beauty or state-of-the-art HTML5 or CSS3 fancyness. Instead, using a **quick-and-dirty solution is fine for the markup**. Your PHP code should however show your skills regarding cleanness, readability and best practices. Wherever possible, try to follow the [SOLID principles](https://en.wikipedia.org/wiki/SOLID), at least as far as it is useful for this small challenge. 
