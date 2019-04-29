@@ -1,10 +1,10 @@
-# Laravel Code Test
+# Laravel Code Challenge
 
 This code test involves the creation of a working project with the help of the Laravel framework.
 The task is split into three sub-categories and shouldn't take longer than 2-4 hours of your time.
 
 ### Prerequisites
-This code test does not involve any use of database connections. Therefore, you can clone this repository and run it locally as long as you have php >= 7.1.3 installed on your machine. Alternatively, you can install a VM such as Homestead.
+This code challenge does not involve any use of database connections. Therefore, you can clone this repository and run it locally as long as you have php >= 7.1.3 installed on your machine. Alternatively, you can install a VM such as Homestead.
 
 1. Option (php cli)
 - On Debian/Ubuntu machines, you can simply install everyting needed via apt, given you have the correct apt repository configured:
@@ -18,7 +18,7 @@ This code test does not involve any use of database connections. Therefore, you 
 
 ### Restrictions and Requirements
 1. Please do **NOT** use any JS/AJAX to solve this challenge but build it in PHP. 
-1. You can use any libraries you can find and make use of.
+1. You can use any libraries you can find.
 1. This challenge doesn't focus on the UI. Do not spend too much time on layout/css.
 1. You should focus on code quality and structure. If possible and timely reasonable, also add tests.
 1. Wherever possible and reasonable, try to follow the [SOLID principles](https://en.wikipedia.org/wiki/SOLID)
