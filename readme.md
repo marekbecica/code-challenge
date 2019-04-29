@@ -26,7 +26,7 @@ This code test does not involve any use of database connections. Therefore, you 
 ### The Challenge
 Implement the following functionality by using the official Spotify Developer's API. You can create an account [here](https://developer.spotify.com/dashboard/). Find out how to use their API in order to fulfill the implementation goals.
 
-1. Allow your application to communicate with the Spotify API. Implement Authentication against their API and the retrieval of an access token that can be used for further requests. ([Reference](https://developer.spotify.com/documentation/general/guides/authorization-guide/#client-credentials-flow))
+1. Allow your application to communicate with the Spotify API via server-to-server communication. Implement Authentication against their API and the retrieval of an access token that can be used for further requests. ([Reference](https://developer.spotify.com/documentation/general/guides/authorization-guide/#client-credentials-flow))
 
 1. When a user searches for any term in the search box (see `index.blade.php`), the result should be three separate lists: one list with matching artists, one with matching albums and one with tracks.
 
