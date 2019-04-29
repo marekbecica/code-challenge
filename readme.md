@@ -16,20 +16,12 @@ This code test does not involve any use of database connections. Therefore, you 
 - In order for the custom domain **homestead.test** to work, you need to add it to your hosts-file (usually under /etc/hosts): `192.168.99.99 homestead.test`. For a quick fix run `sudo sh -c 'echo "192.168.99.99 homestead.test" >> /etc/hosts'` in your terminal.
 - Now you clone this repository and simply run the command `vagrant up`, then `vagrant ssh -c "cd ~/code; composer install"` and your application will be available under the address http://homestead.test
 
-
-### Hints
-This repository has been set up for you to start right away. In case you are not familiar with Laravel, here a few hints:
-- The routes can be found and configured in the file `routes/web.php`.
-- A first controller can be found here: `app/Http/Controllers/SearchController.php`.
-- The views can be found under `resources/views`.
-- Publicly accessible assets can be placed into the `public/` folder and its sub-directories.
-
-We already created the two routes `/` and `/search` which point to the controller methods `index` and `search` which respectively return the views `index.blade.php` and `search.blade.php`.
-
-### Restrictions
+### Restrictions and Requirements
 1. Please do **NOT** use any JS/AJAX to solve this challenge but build it in PHP. 
 1. You can use any libraries you can find and make use of.
 1. This challenge doesn't focus on the UI. Do not spend too much time on layout/css.
+1. You should focus on code quality and structure. If possible and timely reasonable, also add tests.
+1. Wherever possible and reasonable, try to follow the [SOLID principles](https://en.wikipedia.org/wiki/SOLID)
 
 ### The Challenge
 Implement the following functionality by using the official Spotify Developer's API. You can create an account [here](https://developer.spotify.com/dashboard/). Find out how to use their API in order to fulfill the implementation goals.
@@ -40,5 +32,14 @@ Implement the following functionality by using the official Spotify Developer's 
 
 1. Each result in the lists should consist of an image and a title (name of artist, album or track respectively). Each result should be clickable and lead to another page which contains some more detailed information about the clicked item.
 
-### Addendum
-In your solution you should focus on code quality and structure. If possible and timely reasonable, you should also add tests. In your Views, however, you do not need to care for beauty or state-of-the-art HTML5 or CSS3 fancyness. Instead, using a **quick-and-dirty solution is fine for the markup**. Your PHP code should however show your skills regarding cleanness, readability and best practices. Wherever possible, try to follow the [SOLID principles](https://en.wikipedia.org/wiki/SOLID), at least as far as it is useful for this small challenge. 
+
+### Hints
+We already created the two routes `/` and `/search` which point to the controller methods `index` and `search` which respectively return the views `index.blade.php` and `search.blade.php`.
+
+This repository has been set up for you to start right away. In case you are not familiar with Laravel, here a few hints:
+- The routes can be found and configured in the file `routes/web.php`.
+- A first controller can be found here: `app/Http/Controllers/SearchController.php`.
+- The views can be found under `resources/views`.
+- Publicly accessible assets can be placed into the `public/` folder and its sub-directories.
+- When communicating with the API, consider using a library such as [Guzzle](http://docs.guzzlephp.org/en/stable/) or [HTTPlug](http://docs.php-http.org/en/latest/httplug/tutorial.html)
+
