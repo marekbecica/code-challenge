@@ -44,4 +44,9 @@ return [
         ],
     ],
 
+    'spotify' => [
+        'secret' => env('SPOTIFY_SECRET'),
+        'id' => env('SPOTIFY_ID')
+    ],
+
 ];

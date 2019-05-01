@@ -15,7 +15,17 @@ class SearchController extends Controller
     public function search(Request $request)
     {
         $query = $request->get('query');
-
-        return view('search', ['searchTerm' => $query]);
+        /* @var \App\Services\Spotify $spotify */
+        $spotify = resolve('App\Services\Spotify');
+        $res = $spotify->searchAll($query);
+        $albums = $res['albums'];
+        $tracks = $res['tracks'];
+        $artists = $res['artists'];
+        return view('search', [
+            'searchTerm' => $query,
+            'albums' => $albums,
+            'tracks' => $tracks,
+            'artists' => $artists
+        ]);
     }
 }

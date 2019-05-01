@@ -13,3 +13,6 @@
 
 Route::get('/', "SearchController@index");
 Route::post('/search', "SearchController@search");
+Route::get('/albums/{album}', "AlbumsController@view");
+Route::get('/tracks/{track}', "TracksController@view");
+Route::get('/artists/{artist}', "ArtistsController@view");

@@ -27,6 +27,30 @@
     <div class="result">
         Your Search Term Was: <b>{{$searchTerm}}</b>
     </div>
+    <h2>Albums</h2>
+    @foreach($albums['items'] as $album)
+        {{$album['id']}}<br>
+        {{$album['name']}}<br>
+        @if(isset($album['images'][0]))
+        {{$album['images'][0]['url']}}<br>
+        @endif
+    @endforeach
+    <h2>Artists</h2>
+    @foreach($artists['items'] as $artist)
+        {{$artist['id']}}<br>
+        {{$artist['name']}}<br>
+        @if(isset($artist['images'][0]))
+            {{$artist['images'][0]['url']}}<br>
+        @endif
+    @endforeach
+    <h2>Tracks</h2>
+    @foreach($tracks['items'] as $track)
+        {{$track['id']}}<br>
+        {{$track['name']}}<br>
+        @if(isset($track['images'][0]))
+            {{$track['images'][0]['url']}}<br>
+        @endif
+    @endforeach
 </div>
 </body>
 </html>
