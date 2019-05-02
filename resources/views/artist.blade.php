@@ -22,7 +22,27 @@
 </head>
 <body>
 <div class="full-height">
+    @if(isset($artist['images'][1]))
+        <img src ="{{$artist['images'][1]['url']}}" width="200" height="200"><br>
+    @endif
     <h2>{{$artist['name']}}</h2>
+        <table>
+            <tr>
+                <th>Genres</th>
+                <td>
+                    @foreach($artist['genres'] as $genre)
+                        {{$genre}}<br>
+                    @endforeach
+                </td>
+            </tr>
+            <tr>
+                <th>Popularity</th>
+                <td>
+                    {{$artist['popularity']}}
+                </td>
+            </tr>
+
+        </table>
 </div>
 </body>
 </html>

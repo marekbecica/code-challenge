@@ -10,8 +10,9 @@ class ArtistsController extends Controller
     {
         /* @var \App\Services\Spotify $spotify */
         $spotify = resolve('App\Services\Spotify');
-        $res = $spotify->searchAll($artist);
-        return view('album', [
+        $res = $spotify->getArtist($artist);
+        return view('artist', [
+            'artist' => $res
         ]);
     }
 }

@@ -22,7 +22,35 @@
 </head>
 <body>
 <div class="full-height">
+    @if(isset($album['images'][1]))
+        <img src ="{{$album['images'][1]['url']}}" width="300" height="300"><br>
+    @endif
     <h2>{{$album['name']}}</h2>
+    <table>
+        <tr>
+            <th>Artist</th>
+            <td>
+                @foreach($album['artists'] as $artist)
+                    {{$artist['name']}}<br>
+                @endforeach
+            </td>
+        </tr>
+        <tr>
+            <th>Release Date</th>
+            <td>
+                {{$album['release_date']}}
+            </td>
+        </tr>
+        <tr>
+            <th>Tracks</th>
+            <td>
+                @foreach($album['tracks']['items'] as $track)
+                    {{$track['name']}}<br>
+                @endforeach
+            </td>
+        </tr>
+
+    </table>
 </div>
 </body>
 </html>

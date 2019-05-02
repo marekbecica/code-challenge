@@ -10,8 +10,9 @@ class TracksController extends Controller
     {
         /* @var \App\Services\Spotify $spotify */
         $spotify = resolve('App\Services\Spotify');
-        $res = $spotify->searchAll($track);
-        return view('album', [
+        $res = $spotify->getTrack($track);
+        return view('track', [
+            'track' => $res
         ]);
     }
 }
