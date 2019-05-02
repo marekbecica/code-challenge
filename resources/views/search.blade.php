@@ -27,21 +27,33 @@
     <div class="result">
         Your Search Term Was: <b>{{$searchTerm}}</b>
     </div>
+
     <h2>Albums</h2>
+    @if (empty($albums['items']))
+        No albums with given keyword found
+    @endif
     @foreach($albums['items'] as $album)
         <a href="{!! url('albums', [$album['id']]) !!}">{{$album['name']}}</a><br>
         @if(isset($album['images'][2]))
         <img src ="{{$album['images'][2]['url']}}" width="64" height="64" alt="{{$album['name']}}"><br>
         @endif
     @endforeach
+
     <h2>Artists</h2>
+    @if (empty($artists['items']))
+        No artists with given keyword found
+    @endif
     @foreach($artists['items'] as $artist)
         <a href="{!! url('artists', [$artist['id']]) !!}">{{$artist['name']}}</a><br>
         @if(isset($artist['images'][2]))
             <img src ="{{$artist['images'][2]['url']}}" width="64" height="64"><br>
         @endif
     @endforeach
+
     <h2>Tracks</h2>
+    @if (empty($tracks['items']))
+        No tracks with given keyword found
+    @endif
     @foreach($tracks['items'] as $track)
         <a href="{!! url('tracks', [$track['id']]) !!}">{{$track['name']}}</a><br>
         @if(isset($track['album']['images'][2]))
